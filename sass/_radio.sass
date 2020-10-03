@@ -1,0 +1,38 @@
+.gv-radio-group
+    display: flex
+    flex-direction: column
+    margin-bottom: 25px
+
+.gv-castom-radio
+    display: inline-block
+    width: 16px
+    height: 16px
+    background: #ffffff
+    border: 2px solid #7e9bbd
+    vertical-align: text-top
+    margin-right: 5px
+    border-radius: 50% 
+
+    position: relative 
+    &::before
+        content: ''
+        display: inline-block
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background: #1647ed
+
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%) scale(0)
+        transition: 0.2s ease-in
+
+.gv-real-radio
+    width: 0
+    height: 0
+    opacity: 0
+    position: absolute
+    z-index: -1        
+    &:checked + .gv-castom-radio::before
+        transform: translate(-50%, -50%) scale(1)

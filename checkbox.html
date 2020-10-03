@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/style.css">
+    <title>Checkbox</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gv-header">
+            <a href="index.html" class="arrow gv-name">&lt;</a>
+            <span class="gv-name">Checkbox</span>
+        </div>
+
+
+        <div class="gv-group">
+            <div class="gv-col">
+                <label>
+                    <input type="checkbox" name="name-checkbox" class="gv-real-checkbox">
+                    <span class="gv-custom-checkbox"></span> 
+                    жмякай сюды
+                </label>
+                <p><code class="gv-code-html">
+                    &lt;label&gt; <br>
+                        &lt;input type="checkbox" name="name-checkbox" class="gv-real-checkbox"&gt; <br>
+                        &lt;span class="gv-custom-checkbox"&gt;&lt;span&gt; <br>
+                        &lt;label&gt;
+                    </code></p>
+
+            </div>
+
+            <div class="gv-col-2">
+                <p>
+                    <pre class="gv-code-css">
+                                        .gv-real-checkbox
+                                            width: 0
+                                            height: 0
+                                            opacity: 0
+                                            position: absolute
+                                            z-index: -1
+
+                                            &:checked + .gv-custom-checkbox::before
+                                                transform: rotate(40deg) scale(1)
+                                            &:checked + .gv-custom-checkbox::after
+                                                transform: rotate(-55deg) scale(1)                                                
+                                            &:focus + .gv-custom-checkbox
+                                                box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd    
+
+                                        .gv-custom-checkbox
+                                            display: inline-block
+                                            width: 20px
+                                            height: 20px
+                                            background: #ffffff
+                                            border: 2px solid #7e9bbd
+                                            border-radius: 4px
+                                            vertical-align: sub
+                                            margin-right: 5px
+                                            background-color: #707f8833
+
+                                            position: relative
+                                            &::after
+                                                content: ''
+
+                                                display: inline-block
+                                                width: 13px
+                                                height: 3px
+                                                transform: scale(0) 
+                                                background-color: black
+
+                                                position: absolute
+                                                top: 9px
+                                                right: 1px
+                                                transition: 0.1s ease
+                                                
+                                            &::before
+                                                content: ''
+
+                                                display: inline-block
+                                                width: 8px
+                                                height: 3px
+                                                background-color: black
+                                                transform: scale(0)
+
+                                                position: absolute
+                                                top: 11px
+                                                left: 3px
+                                                transition: 0.1s ease
+            
+                    </pre>
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="./sass/style.css">
+    <title>Radio</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gv-header">
+            <a href="index.html" class="arrow gv-name">&lt;</a>
+            <span class="gv-name">Radio</span>
+        </div>
+
+
+        <div class="gv-group">
+            <div class="gv-col">
+                <div class="gv-radio-group">
+                    <label>
+                        <input type="radio" name="gv-radio-cat" value="gv-1" class="gv-real-radio"> 
+                        <span class="gv-castom-radio"></span>
+                        выбери то
+                    </label>
+                    <label>
+                        <input type="radio" name="gv-radio-cat" value="gv-1" class="gv-real-radio"> 
+                        <span class="gv-castom-radio"></span>
+                        выбери се
+                    </label>
+                    <label>
+                        <input type="radio" name="gv-radio-cat" value="gv-1" class="gv-real-radio"> 
+                        <span class="gv-castom-radio"></span>
+                        выбери это
+                    </label>
+  
+                    
+                </div>
+
+                <p><code class="gv-code-html">
+                    <div class="gv-radio">
+                        &lt;label&gt; <br>
+                        &lt;input type="radio" name="gv-radio-cat" value="gv-1" class="gv-real-radio"&gt; <br>
+                            &lt;span class="gv-castom-radio"&gt;&lt;/span&gt; <br>
+                            выбери <br>
+                            &lt;/label&gt;
+                    </div>
+                
+                    </code>
+                </p>
+
+            </div>
+
+            <div class="gv-col-2">
+                <p>
+                    <pre class="gv-code-css">
+                        .gv-radio-group
+                            display: flex
+                            flex-direction: column
+                            margin-bottom: 25px
+
+                        .gv-castom-radio
+                            display: inline-block
+                            width: 16px
+                            height: 16px
+                            background: #ffffff
+                            border: 2px solid #7e9bbd
+                            vertical-align: text-top
+                            margin-right: 5px
+                            border-radius: 50% 
+
+                            position: relative 
+                            &::before
+                                content: ''
+                                display: inline-block
+                                width: 10px
+                                height: 10px
+                                border-radius: 50%
+                                background: #1647ed
+
+                                position: absolute
+                                left: 50%
+                                top: 50%
+                                transform: translate(-50%, -50%) scale(0)
+                                transition: 0.2s ease-in
+
+                        .gv-real-radio
+                            width: 0
+                            height: 0
+                            opacity: 0
+                            position: absolute
+                            z-index: -1        
+                            &:checked + .gv-castom-radio::before
+                                transform: translate(-50%, -50%) scale(1)
+
+            
+                    </pre>
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

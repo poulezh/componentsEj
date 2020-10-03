@@ -1,0 +1,82 @@
+@import "button";
+@import "var";
+@import "checkbox";
+@import "select";
+@import "radio"
+@import "toggle"
+
+label
+    font-size: 16px
+    color: #0b0c0c
+    font-weight: bold
+    margin-bottom: 9px
+    text-align: left  
+
+.container
+    max-width: 1170px
+    padding: 15px
+    margin: 0 auto
+    border: 2px solid #cec5c5
+    border-radius: $border
+    background-color: #e9f0ee
+    box-shadow: $box-chadow
+
+.gv-wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    text-align: center 
+    padding: 15px    
+    
+.gv-block
+    margin: 10px
+    padding: 10px
+    width: 100%
+    border: 1px solid #d8e6da   
+    background-color: #d8e6da 
+    border-radius: $border
+    box-shadow: $box-chadow
+    transition: 0.3s
+    &:hover
+        background-color: #c5dfc9
+        
+.gv-header
+    width: 100%
+    margin: 15px
+    
+.gv-name
+    font-size: 43px
+    font-weight: bold
+    color: #8f6994
+    padding: 15px
+    text-decoration: none
+    transition: 0.4s
+    &:hover
+        color: #6a496e
+
+
+.gv-code-html
+    font-size: 20px
+
+.gv-code-css
+    font-size: 18px
+    color: #4c5043
+    
+.gv-col
+    padding-top: 120px
+    padding-right: 5px
+    padding-bottom: 45px
+    text-align: center
+    @media screen and ( max-width: 992px )
+        text-align: center
+
+.gv-col-2
+    padding-right: 5px
+    display: flex
+    justify-content: center
+    
+
+    
+
+
